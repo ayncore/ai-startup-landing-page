@@ -1,4 +1,3 @@
-// app/page.tsx (or pages/index.tsx)
 
 "use client";
 

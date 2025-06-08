@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-indigo-600 transition-colors dark:text-gray-300 dark:hover:text-indigo-400"
+              className="text-gray-700 hover:text-indigo-600 hover:border-b-1 hover:border-indigo-500 transition-colors dark:text-gray-300 dark:hover:text-indigo-400"
             >
               {link.name}
             </Link>

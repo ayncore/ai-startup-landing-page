@@ -22,7 +22,7 @@ const AnimatedNavItem = ({
       <motion.span
         className="block text-gray-300"
         animate={{
-          y: isHovered ? -50: 0,
+          y: isHovered ? -50 : 0,
           opacity: isHovered ? 0 : 1,
         }}
         transition={{ duration: 0.12, ease: "easeOut" }}
@@ -95,6 +95,30 @@ const CollabText = () => {
 };
 
 export default function AnimatedNavUI() {
+  const text = "AYN CORE".split(" ");
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each word
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        duration: 0.6,
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -186,7 +210,7 @@ export default function AnimatedNavUI() {
 
         {/* Footer */}
         <motion.div
-          className="mt-16 sm:mt-24 lg:mt-32 pt-6 sm:pt-8 border-t border-gray-800"
+          className="mt-8 sm:mt-10 lg:mt-10 pt-6 sm:pt-8 border-t border-gray-800"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -194,14 +218,36 @@ export default function AnimatedNavUI() {
           <p className="text-gray-500 text-xs sm:text-sm">
             Designed by{" "}
             <AnimatedNavItem href="#designer">
-              <span className="text-gray-400">AYN CORE</span>
+              <span className="text-gray-400">-</span>
             </AnimatedNavItem>
           </p>
-              </motion.div>
-              <div className="text-center">AYN CORE</div>
+        </motion.div>
+
+        {/* AYN CORE Text with partial visibility */}
+        <div className="relative overflow-hidden h-[100px] sm:h-[120px] md:h-[150px] lg:h-[180px] xl:h-[200px]"> {/* Adjust height as needed */}
+          <motion.div
+             className="absolute bottom-0 left-0 right-0 text-center font-[monoton] opacity-10 text-white/10 dark:text-white/10"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            style={{ transform: "translateY(26%)" }} 
+          >
+            {text.map((word, index) => (
+              <motion.span
+                key={index}
+                className="inline-block text-[80px] sm:text-[100px] md:text-[120px] lg:text-[150px] xl:text-[180px] leading-none"
+                variants={itemVariants}
+              >
+                {word}
+                {index < text.length - 1 && (
+                  <span className="inline-block w-4 sm:w-6 md:w-8"></span>
+                )}{" "}
+              </motion.span>
+            ))}
+          </motion.div>
+        </div>
       </div>
 
-      {/* Background Elements */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <motion.div
           className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
