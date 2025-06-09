@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -6,6 +5,8 @@ import Head from "next/head";
 import AnimatedBulletText from "./components/BulletAnimation";
 import WorkSection from "./sections/WorkSection";
 import Footer from "./sections/Footer";
+import Whyus from "./sections/whyus";
+import Pricing from "./sections/Pricing";
 
 export default function Home() {
   return (
@@ -67,26 +68,13 @@ export default function Home() {
       <WorkSection />
 
       {/* CTA Section */}
-      <section className="py-20 bg-indigo-600 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-4xl font-bold mb-4"
-        >
-          Ready to get started?
-        </motion.h2>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          className="bg-white text-indigo-600 font-bold px-6 py-3 rounded-lg"
-        >
-          Start Your Free Trial
-        </motion.button>
-      </section>
+      <Whyus />
+
+      {/* Pricing Section */}
+      <Pricing />
 
       {/* Footer */}
       <Footer />
     </main>
   );
 }
-
