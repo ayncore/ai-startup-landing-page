@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -113,11 +114,12 @@ export default function AnimatedNavUI() {
       y: 0,
       opacity: 1,
       transition: {
-        ease: "easeOut",
+        ease: "easeInOut", // Fix: Use a valid easing type
         duration: 0.6,
       },
     },
   };
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
@@ -218,27 +220,32 @@ export default function AnimatedNavUI() {
           <p className="text-gray-500 text-xs sm:text-sm">
             Designed by{" "}
             <AnimatedNavItem href="#designer">
-              <span className="text-gray-400">        <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="rotate-75 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
-              >
-                <path
-                  d="M7 17L17 7M17 7H7M17 7V17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg></span>
+              <span className="text-gray-400">
+                {" "}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="rotate-75 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
+                >
+                  <path
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
             </AnimatedNavItem>
           </p>
         </motion.div>
 
         {/* AYN CORE Text with partial visibility */}
-        <div className="relative overflow-hidden h-[100px] sm:h-[120px] md:h-[150px] lg:h-[180px] xl:h-[200px]"> {/* Adjust height as needed */}
+        <div className="relative overflow-hidden h-[100px] sm:h-[120px] md:h-[150px] lg:h-[180px] xl:h-[200px]">
+          {" "}
+          {/* Adjust height as needed */}
           <motion.div
             className="absolute bottom-0 left-0 right-0 text-center font-[monoton] opacity-10 text-white/10 dark:text-white/10"
             variants={containerVariants}
