@@ -59,6 +59,8 @@ const CollabText = () => {
         if you want to collab.
       </span>
 
+      
+      
       <motion.div
         className="ml-2 sm:ml-3 text-white flex-shrink-0"
         initial={{ y: 10, opacity: 0, scale: 0.5 }}
@@ -119,7 +121,6 @@ export default function AnimatedNavUI() {
       },
     },
   };
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
@@ -257,14 +258,24 @@ export default function AnimatedNavUI() {
               <motion.span
                 key={index}
                 className="inline-block text-[80px] sm:text-[100px] md:text-[120px] lg:text-[150px] xl:text-[180px] leading-none"
-                variants={itemVariants}
+                variants={{
+                  hidden: { y: 20, opacity: 0 },
+                  visible: {
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      ease: "easeOut",
+                      duration: 0.5,
+                    },
+                  },
+                }}
               >
                 {word}
                 {index < text.length - 1 && (
                   <span className="inline-block w-4 sm:w-6 md:w-8"></span>
                 )}{" "}
               </motion.span>
-            ))}
+            ))}{" "}
           </motion.div>
         </div>
       </div>

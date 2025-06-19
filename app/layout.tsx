@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className="fixed bottom-0 right-0 w-[600px] h-[400px] bg-gradient-to-tl from-pink-600/15 via-purple-700/10 to-transparent blur-3xl pointer-events-none"></div>
         
         {/* Content Wrapper */}
-        <div className="relative z-10 min-h-screen flex flex-col">
+        <div className="relative z-10 min-h-screen flex flex-col" id="home">
           {/* Navigation */}
           {/* <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
             <div className="flex items-center gap-2">

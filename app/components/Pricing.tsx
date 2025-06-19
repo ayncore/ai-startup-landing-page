@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 const Pricing = () => {
   return (
-       <section className="py-32 px-6 relative overflow-hidden">
+       <section className="py-32 px-6 relative overflow-hidden" id='pricing'>
         {/* Enhanced Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[400px] bg-gradient-to-r from-purple-600/15 via-pink-600/20 to-purple-600/15 rounded-full blur-3xl"></div>

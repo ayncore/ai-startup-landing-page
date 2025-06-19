@@ -33,10 +33,10 @@ const DashboardLayout = () => {
                   <div className="w-3 h-3 bg-yellow-500 rounded-full hover:bg-yellow-400 transition-colors cursor-pointer"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full hover:bg-green-400 transition-colors cursor-pointer"></div>
                 </div>
-                <div className="ml-4 flex items-center gap-2 bg-black/40 rounded-lg px-3 py-1">
+                <div className="ml-4 flex items-center gap-2 justify-center bg-black/40 rounded-lg px-3 py-1">
                   <div className="w-3 h-3 text-green-400">🔒</div>
                   <span className="text-xs text-gray-400">
-                    app.aikit.com/dashboard
+                   anycode.com
                   </span>
                 </div>
               </div>

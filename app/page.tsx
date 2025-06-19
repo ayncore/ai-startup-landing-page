@@ -10,6 +10,7 @@ import Features from './Features';
 import Pricing from './components/Pricing';
 import Social from './components/Social';
 import DashboardLayout from './components/DashboardLayout';
+import Contact from './components/Contact';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -90,7 +91,7 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* Trusted Companies Section */}
-      <section className="py-16 px-6">
+      {/* <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-white mb-12 text-lg">
             Trusted by the world's most innovative teams
@@ -125,13 +126,14 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Elevate Your Efforts Section */}
 
       <Efforts />
       {/* AI Power Section */}
 
+      <Contact/>
       <AiPower />
       {/* Features Section */}
       <Features />

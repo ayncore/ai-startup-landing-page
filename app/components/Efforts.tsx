@@ -200,7 +200,7 @@ const Efforts = () => {
               </div>
 
               {/* One-click optimization */}
-              <div className="group cursor-pointer">
+              {/* <div className="group cursor-pointer">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 border border-indigo-500/30 flex items-center justify-center group-hover:border-indigo-400/50 transition-all duration-300">
                     <Settings className="w-6 h-6 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
@@ -215,10 +215,10 @@ const Efforts = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Competitor reports */}
-              <div className="group cursor-pointer">
+              {/* <div className="group cursor-pointer">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/30 border border-red-500/30 flex items-center justify-center group-hover:border-red-400/50 transition-all duration-300">
                     <Shield className="w-6 h-6 text-red-400 group-hover:text-red-300 transition-colors" />
@@ -234,7 +234,7 @@ const Efforts = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
