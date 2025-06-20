@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const AnimatedNavItem = ({
   children,
@@ -55,9 +56,9 @@ const CollabText = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className="text-gray-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <Link href="/contact" className="text-gray-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
         if you want to collab.
-      </span>
+      </Link>
 
       
       
@@ -175,7 +176,7 @@ export default function AnimatedNavUI() {
                       <AnimatedNavItem href="#about">About</AnimatedNavItem>
                     </div>
                     <div className="block">
-                      <AnimatedNavItem href="#contact">Contact</AnimatedNavItem>
+                      <AnimatedNavItem href="/contact">Contact</AnimatedNavItem>
                     </div>
                   </div>
                 </motion.div>

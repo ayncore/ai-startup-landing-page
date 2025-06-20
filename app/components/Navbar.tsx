@@ -7,11 +7,10 @@ import { Menu, X } from "lucide-react";
 
 // Define the nav links
 const navLinks = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "/" },
   { name: "Features", href: "#features" },
-  { name: "Demo", href: "#demo" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "/contact" },
 ];
 
 // AnimatedNavLink component for hover effects (text roll and border wipe)

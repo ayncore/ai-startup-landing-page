@@ -10,7 +10,6 @@ import Features from './Features';
 import Pricing from './components/Pricing';
 import Social from './components/Social';
 import DashboardLayout from './components/DashboardLayout';
-import Contact from './components/Contact';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -133,8 +132,6 @@ const HomePage: React.FC = () => {
       <Efforts />
       {/* AI Power Section */}
 
-      <Contact/>
-      <AiPower />
       {/* Features Section */}
       <Features />
       {/* Platform Support */}
