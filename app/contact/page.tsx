@@ -107,7 +107,7 @@ const Page: React.FC = () => {
                 id="message"
                 className="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-indigo-500 focus:outline-none focus:bg-gray-800 focus:text-indigo-500"
               ></textarea>
-            </div>
+             </div>
           </div>
           <div className="w-full pt-3">
             <motion.button
